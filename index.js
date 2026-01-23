@@ -43,6 +43,9 @@ function initThreeJS() {
     // Create neon hexagon
     createNeonHexagon();
     
+    // Create purple glowing flicker object
+    createPurpleFlicker();
+    
     // Add lighting
     addLights();
     
@@ -183,7 +186,7 @@ function createNeonHexagon() {
     // Create hexagon group
     const hexGroup = new THREE.Group();
     hexGroup.name = 'neonHexagon';
-    hexGroup.position.set(2, 0, -8);
+    hexGroup.position.set(8, 2, -8);
     
     // Green neon material for filled hexagon
     const greenNeonMaterial = new THREE.MeshBasicMaterial({
@@ -342,6 +345,77 @@ function createNeonHexagon() {
     neonHexagon = hexGroup;
 }
 
+function createPurpleFlicker() {
+    // Create purple glowing crystal with flicker animation
+    const purpleGroup = new THREE.Group();
+    purpleGroup.name = 'purpleFlicker';
+    purpleGroup.position.set(-8, 8, -8);
+    
+    // Create crystal geometry - using octahedron for pointed crystal shape
+    const crystalGeometry = new THREE.OctahedronGeometry(1.5, 2);
+    
+    // Purple neon material with metallic crystal appearance
+    const purpleMaterial = new THREE.MeshStandardMaterial({
+        color: 0x9d4edd,
+        transparent: true,
+        opacity: 0.8,
+        emissive: 0x9d4edd,
+        emissiveIntensity: 0.9,
+        metalness: 0.6,
+        roughness: 0.2,
+        fog: false,
+        toneMapped: false
+    });
+    
+    // Create filled crystal
+    const crystal = new THREE.Mesh(crystalGeometry, purpleMaterial);
+    purpleGroup.add(crystal);
+    
+    // Create outer glow crystal wireframe
+    const glowGeometry = new THREE.OctahedronGeometry(1.5, 2);
+    const glowMaterial = new THREE.LineBasicMaterial({
+        color: 0xd946ef,
+        linewidth: 2,
+        transparent: true,
+        opacity: 0.95,
+        emissive: 0xd946ef,
+        emissiveIntensity: 1,
+        fog: false,
+        toneMapped: false
+    });
+    
+    // Create wireframe version for crystal edge glow
+    const glowCrystal = new THREE.LineSegments(
+        new THREE.WireframeGeometry(glowGeometry),
+        glowMaterial
+    );
+    glowCrystal.scale.set(1.9, 1.9, 1.9);
+    purpleGroup.add(glowCrystal);
+    
+    // Add inner crystal geometry for depth
+    const innerCrystalGeometry = new THREE.TetrahedronGeometry(0.8, 1);
+    const innerMaterial = new THREE.MeshStandardMaterial({
+        color: 0xc77dff,
+        transparent: true,
+        opacity: 0.6,
+        emissive: 0xd946ef,
+        emissiveIntensity: 0.7,
+        metalness: 0.8,
+        roughness: 0.1,
+        fog: false,
+        toneMapped: false
+    });
+    
+    const innerCrystal = new THREE.Mesh(innerCrystalGeometry, innerMaterial);
+    purpleGroup.add(innerCrystal);
+    
+    // Store flicker reference for animation
+    purpleGroup.flickerIntensity = 1;
+    purpleGroup.flickerSpeed = 0.1;
+    
+    scene.add(purpleGroup);
+}
+
 function createGeometry() {
     // Create rotating wireframe sphere
     const sphereGeometry = new THREE.IcosahedronGeometry(1, 4);
@@ -487,6 +561,32 @@ function animate() {
         
         // Floating vertical motion
         neonHexagon.position.y = Math.sin(time * 1.5) * 0.5;
+    }
+    
+    // Animate purple flicker
+    const purpleFlicker = scene.getObjectByName('purpleFlicker');
+    if (purpleFlicker) {
+        // Random flicker effect
+        const flicker = Math.random() > 0.85 ? 0.4 + Math.random() * 0.6 : 1;
+        
+        // Pulsing glow
+        const pulse = 0.7 + Math.sin(time * 2.5) * 0.3;
+        
+        purpleFlicker.children.forEach(child => {
+            if (child.material) {
+                child.material.opacity = flicker * pulse;
+                if (child.material.emissiveIntensity !== undefined) {
+                    child.material.emissiveIntensity = flicker * pulse;
+                }
+            }
+        });
+        
+        // Floating rotation
+        purpleFlicker.rotation.x += 0.008;
+        purpleFlicker.rotation.y += 0.012;
+        
+        // Floating vertical motion
+        purpleFlicker.position.y = 8 + Math.sin(time * 1.5) * 0.5;
     }
     
     // Enhanced rotation and movement for geometries
