@@ -87,12 +87,12 @@ function createParticles() {
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     
     const material = new THREE.PointsMaterial({
-        color: 0xffffff,
+        color: 0xDAF1DE,
         size: 0.08,
         sizeAttenuation: true,
         transparent: true,
         opacity: 1,
-        emissive: 0xffffff,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 0.7,
         toneMapped: false,
         fog: false
@@ -145,11 +145,11 @@ function createNeonLightning() {
     lightningGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions), 3));
     
     const neonMaterial = new THREE.LineBasicMaterial({
-        color: 0x00ffff,
+        color: 0xDAF1DE,
         linewidth: 8,
         transparent: true,
         opacity: 1,
-        emissive: 0x00ffff,
+        emissive: 0xDAF1DE,
         fog: false,
         toneMapped: false
     });
@@ -164,11 +164,11 @@ function createNeonLightning() {
     glowGeometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(positions), 3));
     
     const glowMaterial = new THREE.LineBasicMaterial({
-        color: 0x00ffff,
+        color: 0xDAF1DE,
         linewidth: 2,
         transparent: true,
         opacity: 0.3,
-        emissive: 0x00ffff,
+        emissive: 0xDAF1DE,
         fog: false,
         toneMapped: false
     });
@@ -190,10 +190,10 @@ function createNeonHexagon() {
     
     // Green neon material for filled hexagon
     const greenNeonMaterial = new THREE.MeshBasicMaterial({
-        color: 0x00ff88,
+        color: 0xDAF1DE,
         transparent: true,
         opacity: 0.6,
-        emissive: 0x00ff88,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 0.7,
         fog: false,
         toneMapped: false
@@ -201,11 +201,11 @@ function createNeonHexagon() {
     
     // Green neon line material
     const greenLineNeonMaterial = new THREE.LineBasicMaterial({
-        color: 0x00ff88,
+        color: 0xDAF1DE,
         linewidth: 4,
         transparent: true,
         opacity: 1,
-        emissive: 0x00ff88,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 0.8,
         fog: false,
         toneMapped: false
@@ -277,10 +277,10 @@ function createNeonHexagon() {
     
     // Inner hexagon with slightly different opacity
     const innerFillMaterial = new THREE.MeshBasicMaterial({
-        color: 0x00ff88,
+        color: 0xDAF1DE,
         transparent: true,
         opacity: 0.4,
-        emissive: 0x00ff88,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 0.6,
         fog: false,
         toneMapped: false
@@ -325,11 +325,11 @@ function createNeonHexagon() {
     
     // Create glow effect
     const glowMaterial = new THREE.LineBasicMaterial({
-        color: 0x00ff88,
-        linewidth: 1,
+        color: 0xDAF1DE,
+        linewidth: 8,
         transparent: true,
         opacity: 0.3,
-        emissive: 0x00ff88,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 0.5,
         fog: false,
         toneMapped: false
@@ -356,10 +356,10 @@ function createPurpleFlicker() {
     
     // Purple neon material with metallic crystal appearance
     const purpleMaterial = new THREE.MeshStandardMaterial({
-        color: 0x9d4edd,
+        color: 0xDAF1DE,
         transparent: true,
         opacity: 0.8,
-        emissive: 0x9d4edd,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 0.9,
         metalness: 0.6,
         roughness: 0.2,
@@ -374,11 +374,11 @@ function createPurpleFlicker() {
     // Create outer glow crystal wireframe
     const glowGeometry = new THREE.OctahedronGeometry(1.5, 2);
     const glowMaterial = new THREE.LineBasicMaterial({
-        color: 0xd946ef,
+        color: 0xDAF1DE,
         linewidth: 2,
         transparent: true,
         opacity: 0.95,
-        emissive: 0xd946ef,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 1,
         fog: false,
         toneMapped: false
@@ -395,10 +395,10 @@ function createPurpleFlicker() {
     // Add inner crystal geometry for depth
     const innerCrystalGeometry = new THREE.TetrahedronGeometry(0.8, 1);
     const innerMaterial = new THREE.MeshStandardMaterial({
-        color: 0xc77dff,
+        color: 0xDAF1DE,
         transparent: true,
         opacity: 0.6,
-        emissive: 0xd946ef,
+        emissive: 0xDAF1DE,
         emissiveIntensity: 0.7,
         metalness: 0.8,
         roughness: 0.1,
