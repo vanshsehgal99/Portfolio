@@ -693,6 +693,10 @@ section .btn.loading::after {
     color: #051F20;
     line-height: 1.6;
     font-size: 14px;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form {
