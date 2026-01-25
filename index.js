@@ -742,3 +742,55 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ============================================
+// EmailJS Contact Form Handler
+// ============================================
+(function() {
+    // Initialize EmailJS
+    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+    
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Disable button and show loading state
+            const submitBtn = contactForm.querySelector('.email-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Prepare template parameters
+            const templateParams = {
+                from_name: contactForm.querySelector('[name="from_name"]').value,
+                from_email: contactForm.querySelector('[name="from_email"]').value,
+                message: contactForm.querySelector('[name="message"]').value,
+                to_email: 'vanshsehgal6267@gmail.com'
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    
+                    // Show success message
+                    alert('Message sent successfully! I will get back to you soon.');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Restore button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }, function(error) {
+                    console.error('Error sending email:', error);
+                    alert('Failed to send message. Please try again or email me directly.');
+                    
+                    // Restore button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    }
+})();
