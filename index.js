@@ -719,7 +719,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const fadeElements = document.querySelectorAll('section, .project-card, .certificate-card');
+    const fadeElements = document.querySelectorAll(
+        'section, .project-card, .certificate-card, .about-text-content, .skills, .skills-table tbody tr, .about-image-content, .about-container, .about-text, .skills-table, .image-wrapper'
+    );
     
     const observerOptions = {
         root: null,
@@ -740,4 +742,7 @@ document.addEventListener('DOMContentLoaded', function() {
         element.classList.add(`delay-${index % 3 + 1}`);
         fadeInObserver.observe(element);
     });
+
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 });
