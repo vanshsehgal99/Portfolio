@@ -720,7 +720,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const fadeElements = document.querySelectorAll(
-        'section, .project-card, .certificate-card, .about-text-content, .skills, .skills-table tbody tr, .about-image-content, .about-container, .about-text, .skills-table, .image-wrapper'
+        '.project-card, .certificate-card, .about-text-content, .skills, .skills-table tbody tr, .about-image-content, .about-container, .about-text, .skills-table, .image-wrapper'
     );
     
     const observerOptions = {
