@@ -1,4 +1,4 @@
-html, body{
+    html, body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,10 @@ html, body{
     
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-style: normal
+  font-style: normal;
+
+
+  
 }
 
 a{
@@ -988,6 +991,26 @@ section .btn.loading::after {
 .view-more-btn:active {
     transform: translateY(0);
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.15);
+}
+
+/* Give project View More the same style as the email button */
+.email-btn.view-more-btn {
+    background: transparent;
+    color: #051F20;
+    border: 2px solid #051F20;
+    box-shadow: 0 4px 15px rgba(5, 31, 32, 0.1);
+}
+
+.email-btn.view-more-btn:hover {
+    background: #08122E;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 18, 46, 0.15);
+}
+
+.email-btn.view-more-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(5, 31, 32, 0.1);
 }
 
 .hidden {
