@@ -681,18 +681,37 @@ if (document.readyState === 'loading') {
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    const viewMoreBtn = document.querySelector('.view-more-btn');
-    const hiddenCertificates = document.querySelectorAll('.certificate-card.hidden');
-
-    if (viewMoreBtn && hiddenCertificates.length > 0) {
-        viewMoreBtn.addEventListener('click', function() {
-            hiddenCertificates.forEach(certificate => {
-                certificate.classList.remove('hidden');
-                certificate.style.animation = 'fadeIn 0.5s ease forwards';
-            });
-            viewMoreBtn.style.display = 'none';
+    // Ensure only the first few project cards are visible by default
+    const projectCards = document.querySelectorAll('.projects .project-card');
+    const maxVisibleProjects = 3;
+    if (projectCards.length > maxVisibleProjects) {
+        projectCards.forEach((card, index) => {
+            if (index >= maxVisibleProjects) {
+                card.classList.add('hidden');
+            }
         });
     }
+
+    // Handle View More buttons (for certificates and projects)
+    const viewMoreBtns = document.querySelectorAll('.view-more-btn');
+    viewMoreBtns.forEach(btn => {
+        const targetSelector = btn.dataset.target;
+        if (!targetSelector) return;
+
+        const hiddenItems = document.querySelectorAll(targetSelector);
+        if (hiddenItems.length === 0) {
+            btn.style.display = 'none';
+            return;
+        }
+
+        btn.addEventListener('click', function() {
+            hiddenItems.forEach(item => {
+                item.classList.remove('hidden');
+                item.style.animation = 'fadeIn 0.5s ease forwards';
+            });
+            btn.style.display = 'none';
+        });
+    });
 
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
