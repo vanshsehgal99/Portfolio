@@ -31,7 +31,7 @@
         /* ── ACTIVE NAV ── */
         const secs = document.querySelectorAll('section[id]');
         const nls = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', () => {A
             let cur = '';
             secs.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
             nls.forEach(a => a.classList.toggle('nav-active', a.getAttribute('href') === '#' + cur));
