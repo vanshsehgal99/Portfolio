@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vansh Sehgal - Frontend Developer Portfolio showcasing React, JavaScript, and web development projects" />
+    <meta name="keywords" content="frontend developer, react developer, portfolio, web developer, vansh sehgal" />
+    <meta name="author" content="Vansh Sehgal" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vansh Sehgal - Frontend Developer" />
+    <meta property="og:description" content="Building clean, performant web applications" />
+    <meta property="og:image" content="https://vanshsehgal99.github.io/Portfolio/mypic.jpeg" />
+    <meta property="og:url" content="https://vanshsehgal99.github.io/Portfolio/" />
+    <meta property="og:type" content="website" />
+    
+    <title>Vansh Sehgal — Frontend Developer</title>
+    
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Skip to content -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+
+    <!-- ── NAV ── -->
+    <nav id="topnav" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="nav-logo">Vansh <em>Sehgal</em></a>
+        <div class="nav-actions">
+            <button class="ham" id="ham" onclick="toggleNav()" aria-expanded="false" aria-controls="navlist" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <ul class="nav-links" id="navlist">
+            <li><a href="#home" onclick="closeNav()">Home</a></li>
+            <li><a href="#about" onclick="closeNav()">About</a></li>
+            <li><a href="#projects" onclick="closeNav()">Projects</a></li>
+            <li><a href="#certificate" onclick="closeNav()">Certificates</a></li>
+            <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+            <li><a href="CV.pdf" download class="nav-cta" onclick="closeNav()">Resume ↗</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section id="home">
+        <div class="hero-left">
+            <span class="hero-label">FullStack Developer</span>
+            <h1 class="hero-h1">Building interfaces<br>that <em>speak</em><br>for themselves.</h1>
+            <p class="hero-p">A Passionate Web Developer. <br>I create modern and responsive web applications.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">View Work</a>
+                <a href="#contact" class="btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-typed-block">
+                <p class="typed-prompt">Currently building —</p>
+                <p class="typed-display"><span id="typed-text"></span><span class="typed-cursor"></span></p>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/vanshsehgal99" class="s-link" target="_blank" aria-label="Visit my GitHub profile">GitHub</a>
+                <a href="https://www.linkedin.com/in/vanshsehgal99/" class="s-link" target="_blank" aria-label="Visit my LinkedIn profile">LinkedIn</a>
+                <a href="mailto:vanshsehgal6267@gmail.com" class="s-link">Email</a>
+                <a href="https://vanshsehgal99.github.io/Portfolio/" class="s-link" target="_blank">Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section id="about">
+        <div class="s-inner">
+            <div class="s-header reveal">
+                <span class="s-num">01 — About</span>
+                <div>
+                    <h2 class="s-title">Who I <em>am</em></h2>
+                    <p class="s-sub">A detail-driven developer who cares equally about code quality and visual craft.</p>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-photo reveal">
+                    <img src="mypic.jpeg" alt="Vansh Sehgal - Frontend Developer" loading="lazy" />
+                    <!-- <span class="about-photo-label">Vansh Sehgal</span> -->
+                </div>
+                <div class="about-body reveal">
+                    <p>I specialize in crafting modern, responsive web applications that combine aesthetic design with robust functionality. My expertise spans front-end technologies, as well as back-end development and database management.</p>
+
+                    <div class="skill-section">
+                        <div class="skill-section-label">Technical Competency</div>
+                        <div class="skill-rows">
+                            <div class="skill-row">
+                                <span class="sk-cat">Web Development</span>
+                                <div class="sk-tags">
+                                    <span class="sk-tag">HTML5</span>
+                                    <span class="sk-tag">CSS3</span>
+                                    <span class="sk-tag core">JavaScript</span>
+                                    <span class="sk-tag core">Tailwind CSS</span>
+                                    <span class="sk-tag core">React.js</span>
+                                    <span class="sk-tag">PHP</span>
+                                    <span class="sk-tag">REST API</span>
+                                    <span class="sk-tag">CSS3</span>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="skill-row">
+                                <span class="sk-cat">CS Concept</span>
+                                <div class="sk-tags">
+                                    <span class="sk-tag">OOP</span>
+                                    <span class="sk-tag">DBMS</span>
+                                    <span class="sk-tag">DSA</span>
+                                    <span class="sk-tag">Operating System</span>
+                                    <span class="sk-tag">Computer Networks</span>
+                                    <span class="sk-tag">Linux</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-row">
+                                <span class="sk-cat">Programming</span>
+                                <div class="sk-tags">
+                                    <span class="sk-tag">C#</span>
+                                    <span class="sk-tag">C++</span>
+                                    <span class="sk-tag">Java</span>
+                                    <span class="sk-tag">Python</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-row">
+                                <span class="sk-cat">Database</span>
+                                <div class="sk-tags">
+                                    <span class="sk-tag">SQL</span>
+                                    <span class="sk-tag">MySQL</span>
+                                    <span class="sk-tag">PostgreSQL</span>
+                                    <span class="sk-tag">Firebase</span>
+                                </div>
+                            </div>
+                            <div class="skill-row">
+                                <span class="sk-cat">Tools</span>
+                                <div class="sk-tags">
+                                    <span class="sk-tag">Git</span>
+                                    <span class="sk-tag">GitHub</span>
+                                    <span class="sk-tag">Vite</span>
+                                    <span class="sk-tag">.NET</span>
+                                    <span class="sk-tag">Power BI</span>
+                                    <span class="sk-tag">Docker</span>
+                                </div>
+                            </div>
+                            <div class="skill-row">
+                                <span class="sk-cat">AI & Data</span>
+                                <div class="sk-tags">
+                                    <span class="sk-tag">NumPy</span>
+                                    <span class="sk-tag">Pandas</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+        <div class="s-inner">
+            <div class="s-header-projects reveal">
+                <div>
+                    <span class="s-num" style="display:block;margin-bottom:0.6rem;">02 — Work</span>
+                    <h2 class="s-title">Selected <em>projects</em></h2>
+                </div>
+            </div>
+
+            <div class="proj-list" id="proj-list">
+
+                <div class="proj-item reveal">
+                    <span class="proj-idx">01</span>
+                    <div class="proj-info">
+                        <div class="proj-name-row">
+                            <h3 class="proj-name">SnapNote</h3>
+                            <span class="proj-live-badge">Live</span>
+                        </div>
+                        <p class="proj-desc">Responsive React notes app with full CRUD — create, edit, and delete notes in a distraction-free UI. Clean component architecture with local-state persistence.</p>
+                        <div class="proj-stack">
+                            <span class="proj-tech">React</span>
+                            <span class="proj-tech">JavaScript</span>
+                            <span class="proj-tech">CSS3</span>
+                        </div>
+                        <div class="proj-actions">
+                            <a href="https://notes-app-gilt-one.vercel.app/" target="_blank" class="proj-btn primary">Live Demo ↗</a>
+                            <a href="https://github.com/vanshsehgal99/notes-app.git" target="_blank" class="proj-btn">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="proj-thumb-col">
+                        <img src="Notes_app.png" alt="SnapNote - React Notes App" class="proj-thumb" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="proj-item reveal">
+                    <span class="proj-idx">02</span>
+                    <div class="proj-info">
+                        <div class="proj-name-row">
+                            <h3 class="proj-name">TextLooper</h3>
+                            <span class="proj-live-badge">Live</span>
+                        </div>
+                        <p class="proj-desc">A text-repetition utility — enter any string, set a count and delimiter, and get your output instantly. Sharp, minimal single-page tool.</p>
+                        <div class="proj-stack">
+                            <span class="proj-tech">HTML5</span>
+                            <span class="proj-tech">CSS3</span>
+                            <span class="proj-tech">Vanilla JS</span>
+                        </div>
+                        <div class="proj-actions">
+                            <a href="https://vanshsehgal99.github.io/TextLooper/" target="_blank" class="proj-btn primary">Live Demo ↗</a>
+                            <a href="https://github.com/vanshsehgal99/TextLooper.git" target="_blank" class="proj-btn">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="proj-thumb-col">
+                        <img src="txtlooper.png" alt="TextLooper - Text Utility Tool" class="proj-thumb" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="proj-item reveal">
+                    <span class="proj-idx">03</span>
+                    <div class="proj-info">
+                        <div class="proj-name-row">
+                            <h3 class="proj-name">Physique Tracker</h3>
+                            <span class="proj-live-badge">Live</span>
+                        </div>
+                        <p class="proj-desc">Fitness tracking dashboard that converts raw body metrics into progress charts and trend analysis. Built with a focus on clear data visualisation and intuitive UX.</p>
+                        <div class="proj-stack">
+                            <span class="proj-tech">React</span>
+                            <span class="proj-tech">JavaScript</span>
+                            <span class="proj-tech">CSS3</span>
+                        </div>
+                        <div class="proj-actions">
+                            <a href="https://physique-tracker-eight.vercel.app/" target="_blank" class="proj-btn primary">Live Demo ↗</a>
+                            <a href="https://github.com/vanshsehgal99/Physique-Tracker.git" target="_blank" class="proj-btn">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="proj-thumb-col">
+                        <img src="Physique-Tracker.png" alt="Physique Tracker - Fitness Dashboard" class="proj-thumb" loading="lazy" />
+                    </div>
+                </div>
+
+                
+
+                <!-- Hidden projects -->
+                <div class="proj-item hidden-proj reveal">
+                    <span class="proj-idx">04</span>
+                    <div class="proj-info">
+                        <div class="proj-name-row">
+                            <h3 class="proj-name">QR Code Generator</h3>
+                            <span class="proj-live-badge">Live</span>
+                        </div>
+                        <p class="proj-desc">Real-time QR code generation from any text or URL — instant, downloadable output with a clean, minimal interface.</p>
+                        <div class="proj-stack">
+                            <span class="proj-tech">HTML5</span>
+                            <span class="proj-tech">CSS3</span>
+                            <span class="proj-tech">Vanilla JS</span>
+                        </div>
+                        <div class="proj-actions">
+                            <a href="https://vanshsehgal99.github.io/QR-Code-Generator/" target="_blank" class="proj-btn primary">Live Demo ↗</a>
+                            <a href="https://github.com/vanshsehgal99/QR-Code-Generator.git" target="_blank" class="proj-btn">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="proj-thumb-col">
+                        <img src="qrcodegene.png" alt="QR Code Generator" class="proj-thumb" loading="lazy" />
+                    </div>
+                </div>
+
+               
+
+                
+
+            </div><!-- /proj-list -->
+
+            <div class="proj-list-foot">
+                <button class="btn-toggle" id="proj-btn" onclick="toggleProj()">
+                    View more projects <span class="arr">↓</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CERTIFICATES ── -->
+    <section id="certificate">
+        <div class="s-inner">
+            <div class="s-header-simple reveal">
+                <div>
+                    <span class="s-num" style="display:block;margin-bottom:0.6rem;">03 — Credentials</span>
+                    <h2 class="s-title">Certificates &amp; <em>Recognition</em></h2>
+                </div>
+            </div>
+
+            <div class="cert-grid" id="cert-grid">
+
+                <div class="cert-cell reveal">
+                    <div class="cert-img-wrap"><img src="python.png" alt="Python Programming Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">Simplilearn</p>
+                        <h3 class="cert-name">Python Programming</h3>
+                        <a href="https://simpli-web.app.link/e/ok2kTgCILWb" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell reveal">
+                    <div class="cert-img-wrap"><img src="frontendskyscanner.png" alt="Frontend Skyscanner Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">Skyscanner × Forage</p>
+                        <h3 class="cert-name">Frontend Software Engineering</h3>
+                        <a href="https://www.theforage.com/completion-certificates/skoQmxqhtgWmKv2pm/km4rw7dihDr3etqom_skoQmxqhtgWmKv2pm_M9rqGstjBKCZq7BLi_1741800269347_completion_certificate.pdf" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell reveal">
+                    <div class="cert-img-wrap"><img src="artificial intelligence.png" alt="Artificial Intelligence Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">Simplilearn</p>
+                        <h3 class="cert-name">Artificial Intelligence</h3>
+                        <a href="https://simpli-web.app.link/e/HsNqDCFILWb" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell hidden-cert reveal">
+                    <div class="cert-img-wrap"><img src="accenture.png" alt="Accenture Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">Accenture × Forage</p>
+                        <h3 class="cert-name">Software Engineering</h3>
+                        <a href="https://www.theforage.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_M9rqGstjBKCZq7BLi_1732379174275_completion_certificate.pdf" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell hidden-cert reveal">
+                    <div class="cert-img-wrap"><img src="vs frontend certificate.png" alt="Frontend Developer Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">The Boring Education</p>
+                        <h3 class="cert-name">Frontend Developer</h3>
+                        <a href="https://www.theboringeducation.com/certificate/6818b54b7c6cccad5dda254c" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell hidden-cert reveal">
+                    <div class="cert-img-wrap"><img src="cloud platform.png" alt="Verizon Cloud Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">Verizon × Forage</p>
+                        <h3 class="cert-name">Cloud Platform Engineering</h3>
+                        <a href="https://www.theforage.com/completion-certificates/uu47f3odrfruEWjKw/aNJGnRtgfiK5fQqcR_uu47f3odrfruEWjKw_M9rqGstjBKCZq7BLi_1733009019688_completion_certificate.pdf" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell hidden-cert reveal">
+                    <div class="cert-img-wrap"><img src="Deloitte.png" alt="Deloitte Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">Deloitte × Forage</p>
+                        <h3 class="cert-name">Technology Consulting</h3>
+                        <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_M9rqGstjBKCZq7BLi_1741983053933_completion_certificate.pdf" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell hidden-cert reveal">
+                    <div class="cert-img-wrap"><img src="hp ai.png" alt="HP Life AI Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">HP Life</p>
+                        <h3 class="cert-name">Artificial Intelligence for Business</h3>
+                        <a href="https://www.life-global.org/certificate/db7f978e-20bb-43f0-9558-730ea962b80e" class="cert-link" target="_blank">View Certificate ↗</a>
+                    </div>
+                </div>
+
+                <div class="cert-cell hidden-cert reveal">
+                    <div class="cert-img-wrap"><img src="jpmorgen.png" alt="JP Morgan Certificate" class="cert-img" loading="lazy" /></div>
+                    <div class="cert-body">
+                        <p class="cert-org">JP Morgan Chase × Forage</p>
+                        <h3 class="cert-name">Software Engineering Simulation</h3>
+                        <a href="#" class="cert-link">View Certificate ↗</a>
+                    </div>
+                </div>
+
+            </div><!-- /cert-grid -->
+
+            <div class="cert-foot">
+                <button class="btn-toggle" id="cert-btn" onclick="toggleCert()">
+                    View all credentials <span class="arr">↓</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CONTACT ── -->
+    <section id="contact">
+        <div class="s-inner">
+            <div class="contact-left reveal">
+                <p class="contact-eyebrow">04 — Contact</p>
+                <h2 class="contact-heading">Let's build<br>something <em>great</em><br>together.</h2>
+                <p class="contact-p">I'm actively seeking frontend and full-stack roles in Delhi NCR or remote. If you have a project, an opening, or simply want to connect — I'd love to hear from you.</p>
+            </div>
+            <div class="contact-right reveal">
+                <p class="contact-email-label">Direct Contact</p>
+                <a href="mailto:vanshsehgal6267@gmail.com" class="contact-email">vanshsehgal6267@gmail.com</a>
+
+                <!-- Contact Form -->
+                <!-- <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required aria-label="Your name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required aria-label="Your email address" />
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="3" required aria-label="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn-light">Send Message</button>
+                </form> -->
+
+                <div class="contact-actions" style="margin-top: 1rem;">
+                    <a href="CV.pdf" download class="btn-ghost-light">Download CV</a>
+                </div>
+                <div class="contact-socials">
+                    <a href="https://github.com/vanshsehgal99" class="cs-link" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/vanshsehgal99/" class="cs-link" target="_blank">LinkedIn</a>
+                    <a href="https://vanshsehgal99.github.io/Portfolio/" class="cs-link" target="_blank">Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <p class="footer-copy">&copy; <span id="yr"></span> <a href="#">Vansh Sehgal</a>. All rights reserved.</p>
+        <p class="footer-right">Designed &amp; built with intention</p>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
